@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kayıt Ol</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f9f9f9;
+        }
+        nav {
+            background-color: #2e86de;
+            padding: 10px;
+            color: white;
+        }
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        form {
+            margin-top: 40px;
+        }
+        input, button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/dashboard">Ana Sayfa</a>
+        <a href="/ogrenci_listesi">Öğrenci Listesi</a>
+        <a href="/ogrenci_ekle">Öğrenci Ekle</a>
+        <a href="/not_girisi">Not Girişi</a>
+        <a href="/">Çıkış</a>
+    </nav>
+
+    <h2>Yeni Kullanıcı Kaydı</h2>
+
+    <form action="/dashboard" method="get">
+        <label for="ad">Ad:</label>
+        <input type="text" id="ad" name="ad" required>
+
+        <label for="soyad">Soyad:</label>
+        <input type="text" id="soyad" name="soyad" required>
+
+        <label for="email">E-Posta:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="sifre">Şifre:</label>
+        <input type="password" id="sifre" name="sifre" required>
+
+        <button type="submit">Kayıt Ol</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Öğrenci Ekle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f9f9f9;
+        }
+        nav {
+            background-color: #2e86de;
+            padding: 10px;
+            color: white;
+        }
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        form {
+            margin-top: 30px;
+        }
+        input, button {
+            display: block;
+            width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/dashboard">Ana Sayfa</a>
+        <a href="/ogrenci_listesi">Öğrenci Listesi</a>
+        <a href="/ogrenci_ekle">Öğrenci Ekle</a>
+        <a href="/not_girisi">Not Girişi</a>
+        <a href="/">Çıkış</a>
+    </nav>
+
+    <h2>Yeni Öğrenci Ekle</h2>
+
+    <form action="/ogrenci_listesi" method="get">
+        <label for="ad">Ad:</label>
+        <input type="text" id="ad" name="ad" required>
+
+        <label for="soyad">Soyad:</label>
+        <input type="text" id="soyad" name="soyad" required>
+
+        <label for="numara">Öğrenci No:</label>
+        <input type="text" id="numara" name="numara" required>
+
+        <label for="sinif">Sınıf:</label>
+        <input type="text" id="sinif" name="sinif" required>
+
+        <button type="submit">Ekle</button>
+    </form>
+
+</body>
+</html>

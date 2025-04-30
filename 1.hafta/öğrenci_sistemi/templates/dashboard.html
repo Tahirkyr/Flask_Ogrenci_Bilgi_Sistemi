@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontrol Paneli</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #eef2f3;
+        }
+        nav {
+            background-color: #2e86de;
+            padding: 10px;
+            color: white;
+        }
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        .icerik {
+            margin-top: 40px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/dashboard">Ana Sayfa</a>
+        <a href="/ogrenci_listesi">Öğrenci Listesi</a>
+        <a href="/ogrenci_ekle">Öğrenci Ekle</a>
+        <a href="/not_girisi">Not Girişi</a>
+        <a href="/">Çıkış</a>
+    </nav>
+
+    <div class="icerik">
+        <h2>Hoş geldiniz!</h2>
+        <p>Öğrenci Bilgi Sistemi paneline giriş yaptınız.</p>
+
+        <a class="btn" href="/ogrenci_listesi">Öğrenci Listesi</a>
+        <a class="btn" href="/ogrenci_ekle">Yeni Öğrenci Ekle</a>
+        <a class="btn" href="/not_girisi">Not Girişi</a>
+    </div>
+
+</body>
+</html>
