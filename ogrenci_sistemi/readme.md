@@ -79,4 +79,5 @@
  ├── requirements.txt # Gerekli Python paketleri
  └── README.md # Proje açıklama dosyası
 
+https://flask-ogrenci-bilgi-sistemi-2.onrender.com
 
