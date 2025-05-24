@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Öğrenci Bilgi Sistemi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f0f0f0;
+        }
+        nav {
+            background-color: #2e86de;
+            padding: 10px;
+            color: white;
+        }
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        {% if current_user.is_authenticated %}
+        <a href="/dashboard">Ana Sayfa</a>
+        <a href="/ogrenci_listesi">Öğrenci Listesi</a>
+        <a href="/ogrenci_ekle">Öğrenci Ekle</a>
+        <a href="/not_girisi">Not Girişi</a>
+        <span style="margin-left:20px;">Hoş geldiniz, {{ current_user.name }}</span>
+        <a href="{{ url_for('logout') }}" style="float:right;">Çıkış Yap</a>
+        {% else %}
+            <a href="{{ url_for('login') }}">Giriş Yap</a>
+            <a href="{{ url_for('register') }}">Kayıt Ol</a>
+        {% endif %}
+    </nav>
+    
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </div>
+
+    <h2>Hoş Geldiniz Öğrenci Bilgi Sistemine</h2>
+
+</body>
+</html>
